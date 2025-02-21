@@ -1,0 +1,11 @@
+SELECT 
+	Alunos.id AS AlunoID,
+	Alunos.nome AS AlunoNome,
+	Cursos.nome AS CusoNome,
+	Alunos.Salario,
+	Alunos.idade
+
+FROM
+	Alunos
+JOIN
+Cursos ON Alunos.Curso = Cursos.id;
