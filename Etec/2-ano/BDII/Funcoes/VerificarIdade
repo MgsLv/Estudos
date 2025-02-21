@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE FUNCTION eh_maior_idade(aluno_id INT)
+RETURNS BOOLEAN
+DETERMINISTIC
+BEGIN
+	DECLARE aluno_idade INT;
+	SELECT idade INTO aluno_idade FROM alunos WHERE id = aluno_id;
+	RETURN aluno_idade >= 18; -- Retorna verdadeiro se a idade for maior ou igual a 18.
+END; //
+
+DELIMITER ; 
