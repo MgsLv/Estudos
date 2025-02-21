@@ -1,0 +1,13 @@
+CREATE TABLE Cursos (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(250)
+);
+
+CREATE TABLE Alunos (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(250),
+	Curso INT,
+	Salario DOUBLE,
+	idade INT,
+	FOREIGN KEY (Curso) REFERENCES Cursos(id)
+);
