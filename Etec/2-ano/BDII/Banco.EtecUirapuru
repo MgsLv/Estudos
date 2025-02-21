@@ -1,0 +1,23 @@
+CREATE database EtecUirapuru;
+
+
+CREATE TABLE Alunos (
+id INT auto_increment PRIMARY KEY,
+nome varchar (250),
+Curso varchar (250),
+Salario double,
+idade int);
+
+INSERT INTO alunos(nome, Curso, Salario, idade) VALUES('Daniel', 'Desenvolvimento de Sistemas', '1700.00', '16');
+
+UPDATE alunos SET Salario = 4500 WHERE id = '2';
+// Muda o salario do usuário de id '2' para 4500
+
+SELECT * FROM `alunos` WHERE idade = (SELECT MAX(idade) FROM alunos);
+// Mostra a idade maxima dos alunos
+
+SELECT AVG(idade) as idadedosfuncionarios FROM alunos;
+// Mostra a média de idade dos alunos
+
+SELECT * FROM alunos WHERE Salario BETWEEN 7000 and 5000;
+// Mostra a média dos salarios entre 7000 e 5000; 
