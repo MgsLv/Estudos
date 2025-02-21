@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE FUNCTION nopme_maiusculas(aluno_id INT)
+RETURNS VARCHAR(250)
+DETERMINISTIC
+BEGIN
+	DECLARE aluno_nome VARCHAR(250);
+	SELECT UPPER(nome) INTO aluno_nome FROM alunos WHERE id = aluno_id;
+	RETURN aluno_nome;
+END; //
+
+DELIMITER ;
