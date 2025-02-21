@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE FUNCTION salario_anual(aluno_id INT)
+RETURNS DOUBLE
+DETERMINISTIC
+BEGIN
+	DECLARE aluno_salario DOUBLE;
+	SELECT salario INTO aluno_salario FROM alunos WHERE id = aluno_id;
+	RETURN aluno_salario * 12; -- Multiplica o salário mensal por 12.
+END; //
+
+DELIMITER ;
