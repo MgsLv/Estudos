@@ -1,0 +1,6 @@
+INSERT INTO alunos (nome, curso, salario, idade) VALUES 
+('Alice', 'Matemática', 3000.000, 22), 
+('Bruno', 'Física', 2800.000, 25), 
+('Carla', 'Química', 3200.000, 30), 
+('Daniel', 'Biologia', 2500.000, 28), 
+('Eva', 'Computação', 3500.000, 27);
