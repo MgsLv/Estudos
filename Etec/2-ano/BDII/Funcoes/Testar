@@ -1,0 +1,11 @@
+SELECT nopme_maiusculas(1); -- Nome do aluno com ID 1 em maiúsculas.
+SELECT idade_em_meses(2); -- Idade do aluno com ID 2 em meses.
+SELECT eh_maior_idade(3); -- Verifica se o aluno com ID 3 é maior de idade.
+SELECT salario_anual(4); -- Salário anual do aluno com ID 4.
+SELECT curso_do_aluno(5); -- Curso do aluno com ID 5.
+
+SELECT nopme_maiusculas(1); 
+SELECT idade_em_meses(2); 
+SELECT eh_maior_idade(3); 
+SELECT salario_anual(4); 
+SELECT curso_do_aluno(5); 
