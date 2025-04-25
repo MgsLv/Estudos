@@ -10,7 +10,6 @@ class Usuario{
         $dns    = "mysql:dbname=usuarioetimpwiii;host=localhost"; 
         $dbUser = "root";
         $dbPass = "";
-        
         try {
             $this->pdo = new PDO($dns, $dbUser, $dbPass);           
             return true;
@@ -35,6 +34,26 @@ class Usuario{
         return $stmt->execute();
     }
 
+    //fiz para testar
+    function apagar($id){
+        $sql = "DELETE FROM usuarios WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindValue(":id", $id);
+        return $stmt->execute();
+    }
+
+    // fiz para testar
+    function editar($id, $nome, $email, $senha){
+        $sql = "UPDATE usuarios SET nome = :n, email = :e, senha =:s";
+        $stmt = $this->pdo->prepare($sql);
+        
+        $stmt->bindValue(":n", $nome);
+        $stmt->bindValue(":e", $email);
+        $stmt->bindValue(":s", $senha);
+        
+        return $stmt->execute();
+    }
+
     public function chkUser($email){
         //passo 1: criar a consulta sql
         $sql = "SELECT * FROM usuarios WHERE email = :e";
@@ -48,11 +67,7 @@ class Usuario{
         //passo 4: executar o comando
         $stmt->execute();
 
-        if( $stmt->rowCount() > 0 ){
-            return true;
-        }else{
-            return false;
-        }    
+        return $stmt > 0;
     }
 
     public function chkPass($email, $senha){
@@ -70,7 +85,7 @@ class Usuario{
         $stmt->execute();
 
         if ($stmt->rowCount() > 0){
-            return $stmt->fetch();
+            return $stmt fetch();
         }else{
             return false;
         }     
