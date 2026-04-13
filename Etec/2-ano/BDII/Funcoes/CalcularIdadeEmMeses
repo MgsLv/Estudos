@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE FUNCTION idade_em_meses(aluno_id INT)
+RETURNS INT
+DETERMINISTIC
+BEGIN
+	DECLARE aluno_idade INT;
+	SELECT idade INTO aluno_idade FROM alunos WHERE id = aluno_id;
+	RETURN aluno_idade * 12; -- Multiplica a idade em anos por 12.
+END; //
+
+DELIMITER ;

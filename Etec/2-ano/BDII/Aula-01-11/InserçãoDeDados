@@ -1,0 +1,9 @@
+-- Inserindo cursos
+INSERT INTO Cursos (nome) VALUES ('Matematica'), ('Física'), ('Química');
+
+-- Inserindo alunos
+INSERT INTO Alunos (nome, Curso, Salario, idade) VALUES
+('João Silva', 1, 1500.00, 20),
+('Marioa Oliveira', 2, 1800, 21),
+('Pedro Santos', 1, 1600.00, 21),
+('Ana Costa', 3, 1700.00, 19);

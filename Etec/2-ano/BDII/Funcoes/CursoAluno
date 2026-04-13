@@ -1,0 +1,12 @@
+DELIMITER //
+
+CREATE FUNCTION curso_do_aluno(aluno_id INT)
+RETURNS VARCHAR(250)
+DETERMINISTIC
+BEGIN
+	DECLARE aluno_curso VARCHAR(250);
+	SELECT curso INTO aluno_curso FROM alunos WHERE id = aluno_id;
+	RETURN aluno_curso;
+END; //
+
+DELIMITER ;

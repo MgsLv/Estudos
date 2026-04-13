@@ -1,0 +1,35 @@
+<?php
+require 'Usuario.class.php';
+
+$sucesso = $usuario = new Usuario();
+
+if( $sucesso ){ 
+
+}else{
+    echo "<h1>Banco indisponivel. Tente mais tarde";
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="estilo-container">
+            <form action = "home.php" method = "post">
+                <h3 class="titulo">Login</h3>
+                <h3><b>Email</b></h3>
+                <input type="text" name="email" placeholder="Digite um Email"> <br>
+                <h3><b>Senha</b></h3>
+                <input type="password" name="senha" placeholder="Digite um Senha"> <br>
+
+                <input type="submit" class="botao" value = "Entrar">   
+            </form>
+        </div>
+    </div>     
+</body>
+</html>

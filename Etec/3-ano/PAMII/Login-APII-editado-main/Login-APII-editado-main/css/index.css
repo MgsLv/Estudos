@@ -1,0 +1,70 @@
+* { 
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body {
+    background-color: rgb(253, 253, 253);
+}
+
+.topo {
+    background-color: rgb(17, 116, 141);
+    border-bottom: 3px solid rgb(0, 45, 56);
+    height: 150px;
+}
+
+table {
+    padding: 0;
+    margin: 10px;
+    margin-left: 50px;
+    width: 50%;
+}
+
+tr, th {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+}
+
+h2 {
+    padding: 55px;
+    text-align: center;
+    font-family: Arial;
+    color: aliceblue;
+    font-size: 40px;
+}
+
+button {
+    margin: 10px;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgb(240, 240, 240);;
+    border: 1px solid rgb(165, 165, 165);
+    transition: 1s;
+}
+
+button:hover {
+    background-color: rgb(187, 49, 49);
+}
+
+.centraliza {
+    width: 100vw;
+    height: 240px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
+#conteudo {
+    transition: all 0.3s ease;
+}
+

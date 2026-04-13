@@ -1,0 +1,13 @@
+create table t1 ( id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+menssagem CHAR(20)) ENGINE=MyISAM;
+
+create table t2 ( id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+menssagem CHAR(20)) ENGINE=MyISAM;
+
+INSERT INTo t1 (menssagem) VALUES ('teste'),('table'),('t1');
+
+INSERT INTo t2 (menssagem) VALUES ('teste'),('table'),('t2');
+
+create table total (id INT NOT NULL AUTO_INCREMENT, 
+menssagem CHAR(20), INDEX(id))
+ENGINE=MERGE UNION=(t1,t2) INSERT_METHOD=LAST;
