@@ -6,10 +6,12 @@ Repositório de todos os materiais didáticos utilizados durante o meu aprendiza
 - HTML
 - CSS
 - Javascript
+- React (TCC)
 - PHP
 - Java
 - Kotlin
-- React
+- C/C++ (Arduino UNO, usar IDE Arduino ou Thinkercad)
+
 
 ## Como rodar o projeto
 1. Abra a pasta referente ao estudo que deseja executar.
