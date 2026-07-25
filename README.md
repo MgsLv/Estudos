@@ -8,6 +8,7 @@ Repositório de todos os materiais didáticos utilizados durante o meu aprendiza
 - Javascript
 - PHP
 - Java
+- Kotlin
 - React
 
 ## Como rodar o projeto
